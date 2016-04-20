@@ -149,7 +149,10 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             animation: light 1s linear 0s infinite alternate forwards;
         }
         .cbp_tmlabel {
-            padding:  5px 15px;
+            padding:  0px;
+        }
+        .mCSB_container {
+            margin: 0!important;
         }
         li {
             transition: height 1s ease-out;
@@ -199,9 +202,11 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
         }
         .div {
             position: relative;
-            margin-top: 40px;
+            padding: 40px 15px 0;
         }
-
+        .div:nth-of-type(odd){
+            background-color: #222;
+        }
 
         .time {
             font-family: "Lobster Two", "Georgia", serif;
@@ -209,6 +214,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             font-style: italic;
             color: #ddd;
             float: right;
+            margin-right: 5px;
         }
         .user {
             float: right;
@@ -228,6 +234,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             background-color: transparent;
             border: 0px;
             color: #eee;
+            margin:  0;
         }
         .main {
             margin-top: 15px;
@@ -478,10 +485,8 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
                 theme:"light-thin",
                 axis:"y"
             });
-            var focus;
+
             $('.cbp_tmlabel').on('mousewheel', function(event) {
-                focus = event.deltaY;
-                console.log(focus);
                 event.stopPropagation();
             });
 
@@ -576,7 +581,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
         <div class="markdown">
         {{note}}
         </div>
-        <div>
+        </div>
         {{/each}}
     </script>
     <script type="tpl" id="template">
