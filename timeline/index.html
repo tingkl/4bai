@@ -189,6 +189,9 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             color: white;
             background-color: #d9534f;
         }
+        .mCustomScrollBox {
+            border-radius: 5px;
+        }
         hr {
             background-color: transparent;
             height: 0;
@@ -204,7 +207,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             position: relative;
             padding: 40px 15px 0;
         }
-        .div:nth-of-type(odd){
+        .div:nth-of-type(even){
             background-color: #222;
         }
 
@@ -319,6 +322,10 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             display: block;
             color: #E9DBC1;
             position: relative;
+        }
+        .light {
+            color: red;
+            background: yellow;
         }
         body:before {
             background: url(bs-docs-masthead-pattern.png) repeat center center;
@@ -553,6 +560,15 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
                 flag = !flag;
                 evt.preventDefault();
             });
+            $('.btn-danger').click(function () {
+                var root = $('#mCSB_1_container .markdown');
+                var text = $(this).text();
+                root.each(function (i, item) {
+                    var html = $(item).html();
+                    html = html.replace(/<em class="light">(.*?)<\/em>/g, '$1');
+                    $(item).html(html.replace(text, '<em class="light">' + text + '</em>'));
+                });
+            });
             /*var show = true;
             $('.pin').click(function () {
                 if (show) {
@@ -656,11 +672,11 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
         <div class="col-md-8 cbp_tmlabel">
         </div>
           <div class="side col-md-2">
-              <button type="submit" class="btn btn-danger btn-sm">luxury</button>
-              <button type="submit" class="btn btn-danger btn-sm">主谓语</button>
-              <button type="submit" class="btn btn-danger btn-sm">倒装语气</button>
-              <button type="submit" class="btn btn-danger btn-sm">聚焦 聚焦 再聚焦</button>
-              <button type="submit" class="btn btn-danger btn-sm">关键词</button>
+              <button type="submit" class="btn btn-danger btn-sm">消元法</button>
+              <button type="submit" class="btn btn-danger btn-sm">主谓</button>
+              <button type="submit" class="btn btn-danger btn-sm">courgette lettuce</button>
+              <button type="submit" class="btn btn-danger btn-sm">bamboo shoot</button>
+              <button type="submit" class="btn btn-danger btn-sm">edpx-bos</button>
           </div>
     </div>
 </div>
