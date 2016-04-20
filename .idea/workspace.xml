@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ddfbabf-370d-457b-ac8d-392240c332bf" name="Default" comment="" />
+    <list default="true" id="9ddfbabf-370d-457b-ac8d-392240c332bf" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timeline/bs-docs-masthead-pattern.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timeline/css01/component.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timeline/css01/default.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timeline/index01.html" />
+      <change type="DELETED" beforePath="D:\github\4bai\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\4bai\.idea\4bai.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\4bai\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\4bai\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\4bai\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\4bai\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\4bai\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\github\4bai\.idea\workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timeline/css/component.css" afterPath="$PROJECT_DIR$/timeline/css/component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timeline/css/default.css" afterPath="$PROJECT_DIR$/timeline/css/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timeline/index.html" afterPath="$PROJECT_DIR$/timeline/index.html" />
+    </list>
     <ignored path="4bai.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,9 +43,13 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/timeline/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.85" vertical-offset="5904" max-vertical-offset="10059">
-              <caret line="292" column="18" selection-start-line="292" selection-start-column="18" selection-end-line="292" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.73333335" vertical-offset="12418" max-vertical-offset="13461">
+              <caret line="606" column="49" selection-start-line="606" selection-start-column="49" selection-end-line="606" selection-end-column="49" />
               <folding>
+                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -59,8 +79,8 @@
       <file leaf-file-name="default.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timeline/css/default.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="4074">
-              <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="4053">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -69,9 +89,14 @@
       <file leaf-file-name="component.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timeline/css/component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2706" max-vertical-offset="4179">
-              <caret line="139" column="8" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="8" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2622" max-vertical-offset="4095">
+              <caret line="135" column="8" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="8" />
+              <folding>
+                <marker date="1461121876967" expanded="true" signature="451:498" placeholder="{...}" />
+                <marker date="1461121876967" expanded="true" signature="545:668" placeholder="{...}" />
+                <marker date="1461121876967" expanded="true" signature="803:862" placeholder="{...}" />
+                <marker date="1461121876967" expanded="true" signature="1378:1418" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,7 +147,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -131,8 +155,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4bai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4bai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4bai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="4bai" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -218,10 +267,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.752443" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19738989" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -266,6 +315,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10059">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -299,7 +352,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2706" max-vertical-offset="4179">
           <caret line="139" column="8" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="8" />
-          <folding />
+          <folding>
+            <marker date="1461121876967" expanded="true" signature="451:498" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="545:668" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="803:862" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="1378:1418" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -308,6 +366,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="10059">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -341,7 +403,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2706" max-vertical-offset="4179">
           <caret line="139" column="8" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="8" />
-          <folding />
+          <folding>
+            <marker date="1461121876967" expanded="true" signature="451:498" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="545:668" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="803:862" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="1378:1418" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -350,6 +417,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6951">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -367,7 +438,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="4179">
           <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
-          <folding />
+          <folding>
+            <marker date="1461121876967" expanded="true" signature="451:498" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="545:668" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="803:862" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="1378:1418" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -389,25 +465,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/timeline/css/component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2706" max-vertical-offset="4179">
-          <caret line="139" column="8" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="8" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2622" max-vertical-offset="4095">
+          <caret line="135" column="8" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="8" />
+          <folding>
+            <marker date="1461121876967" expanded="true" signature="451:498" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="545:668" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="803:862" placeholder="{...}" />
+            <marker date="1461121876967" expanded="true" signature="1378:1418" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timeline/css/default.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="4074">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="354" max-vertical-offset="4053">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timeline/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.85" vertical-offset="5904" max-vertical-offset="10059">
-          <caret line="292" column="18" selection-start-line="292" selection-start-column="18" selection-end-line="292" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.73333335" vertical-offset="12418" max-vertical-offset="13461">
+          <caret line="606" column="49" selection-start-line="606" selection-start-column="49" selection-end-line="606" selection-end-column="49" />
           <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
