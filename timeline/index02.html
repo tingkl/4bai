@@ -11,11 +11,9 @@
     <script src="js/modernizr.custom.js"></script>
     <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="js/jquery.mCustomScrollbar.css" rel="stylesheet">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
-    <script src="js/jquery.mCustomScrollbar.js"></script>
     <script src="js/showdown.min.js"></script>
     <script type="note" id="a0">
 #hello, markdown!
@@ -26,6 +24,9 @@
 var dump = 1;
 console.log('F4好帅');
 ```
+##例a 构造法
+$已知f(x-3) = x^2+3x+7,求f(x+5)$
+解：
     </script>
     <script type="note" id="a1">
 ### 消元法
@@ -151,9 +152,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
         .cbp_tmlabel {
             padding:  0px;
         }
-        .mCSB_container {
-            margin: 0!important;
-        }
+
         li {
             transition: height 1s ease-out;
             height: 0px;
@@ -189,43 +188,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             color: white;
             background-color: #d9534f;
         }
-        .mCustomScrollBox {
-            border-radius: 5px;
-        }
-        hr {
-            background-color: transparent;
-            height: 0;
-            border: none;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            background-color: transparent;
-            height: 0;
-            border-top: 1px solid rgba(0,0,0,0.7);
-            margin: 0;
-            clear: both;
-        }
-        .div {
-            position: relative;
-            padding: 40px 15px 0;
-        }
-        .div:nth-of-type(even){
-            background-color: #222;
-        }
 
-        .time {
-            font-family: "Lobster Two", "Georgia", serif;
-            font-weight: 700;
-            font-style: italic;
-            color: #ddd;
-            float: right;
-            margin-right: 5px;
-        }
-        .user {
-            float: right;
-            border-radius: 50%;
-            position: relative;
-            top: -8px;
-            margin-right: 10px;
-        }
         @-webkit-keyframes light {
             100% {
                 box-shadow: 0 0 0 0 white;
@@ -233,12 +196,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             }
 
         }
-        pre {
-            background-color: transparent;
-            border: 0px;
-            color: #eee;
-            margin:  0;
-        }
+
         .main {
             margin-top: 15px;
             padding-top: 3px;
@@ -278,32 +236,10 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
         }
         .tooltip {
             z-index: 1000!important;
-           
         }
         .hero .form-group {
             margin-top: 3em;
         }
-/*        .hero form {
-            padding-bottom: 55px;
-        }*/
-        /*.hero .form-control {
-            float: left;
-            width: 75%;
-            display: block;
-            height: 45px;
-            padding: 6px 12px;
-            font-size: 16px;
-            line-height: 1.428571429;
-            color: #555555;
-            background-color: #fff;
-            background-image: none;
-            border: 1px solid #73C1EA;
-            border-radius: 4px;
-            box-shadow: none;
-        }
-        .hero .form-group {
-            margin-top: 30px;
-        }*/
         .hero .btn-custom {
             color: #FFF;
             background-color: #1A86C0;
@@ -314,19 +250,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             width: 21%;
             float: right;
         }
-        .pin {
-            margin: auto;
-            font-size: 2em;
-            width: 28px;
-            height: 20px;
-            display: block;
-            color: #E9DBC1;
-            position: relative;
-        }
-        .light {
-            color: red;
-            background: yellow;
-        }
+
         body:before {
             background: url(bs-docs-masthead-pattern.png) repeat center center;
             content: '';
@@ -453,7 +377,29 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
         var des = {data: [
                 note('a0')
         ]};
-        template.config('escape', false);
+        function getHeight() {
+            return $(window).height() - 20 - $('.hero').height();
+        }
+        function resize() {
+            var height = getHeight();
+            $('.main').height(height);
+            height = height - $('.keys').height() - 10;
+            $('.cbp_tmlabel').height(height);
+            var top = (height - $('.header').height()) / 2;
+            $('.header').css({'top': top + 'px', 'left': 15 + 'px'});
+            postMsg('resize', height);
+        }
+        $(window).resize(resize);
+        window.addEventListener('message', function (event) {
+            console.log(event);
+            if (event.data === 'ready') {
+                resize();
+                postMsg('refresh', des);
+            }
+        });
+        function postMsg (command, obj) {
+            $(".cbp_tmlabel")[0].contentWindow.postMessage(JSON.stringify({command: command, data: obj}), window.location.origin);
+        }
         function initTimeline(data) {
             var html = template('template', data);
             timeline.css({top: '0px'});
@@ -470,28 +416,20 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
                 $(this).addClass('selected');
                 var index = parseInt($(this).attr('data-index'));
                 if (index > -1) {
-                    $('#mCSB_1_container').html(template('note', data.notes[index]));
+                    postMsg('refresh', data.notes[index]);
                 }
                 else {
-                    $('#mCSB_1_container').html(template('note', des));
+                    postMsg('refresh', des);
                 }
-                $('[data-toggle="tooltip"]').tooltip();
             });
             $('.min-height').height(30);
             $('#an-last').height(60);
             $('.cbp_tmtime span:first-child').css('color', '#999');
             $('.cbp_tmtime span:last-child').css('color', '#333');
-            $('#mCSB_1_container').html(template('note', des));
             $('[data-toggle="tooltip"]').tooltip();
             y = 0;
         }
         $(function () {
-            $.mCustomScrollbar.defaults.scrollButtons.enable=true; //enable scrolling buttons by default
-            $.mCustomScrollbar.defaults.axis="yx"; //enable 2 axis scrollbars by default
-            $(".cbp_tmlabel").mCustomScrollbar({
-                theme:"light-thin",
-                axis:"y"
-            });
 
             $('.cbp_tmlabel').on('mousewheel', function(event) {
                 event.stopPropagation();
@@ -537,18 +475,6 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
                     }, 300);
                 }
             }
-            function getHeight() {
-                return $(window).height() - 20 - $('.hero').height();
-            }
-            function resize() {
-                var height = getHeight();
-                $('.main').height(height);
-                $('.cbp_tmlabel').height(height - $('.keys').height() - 10);
-                var top = (height - $('.header').height()) / 2;
-                $('.header').css({'top': top + 'px', 'left': 15 + 'px'});
-            }
-            $(window).resize(resize);
-            resize();
             var flag = true;
             $('#analyses').click(function (evt) {
                 if (flag) {
@@ -561,44 +487,10 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
                 evt.preventDefault();
             });
             $('.btn-danger').click(function () {
-                var root = $('#mCSB_1_container .markdown');
                 var text = $(this).text();
-                root.each(function (i, item) {
-                    var html = $(item).html();
-                    html = html.replace(/<em class="light">(.*?)<\/em>/g, '$1');
-                    $(item).html(html.replace(text, '<em class="light">' + text + '</em>'));
-                });
+                postMsg('highlight', text);
             });
-            /*var show = true;
-            $('.pin').click(function () {
-                if (show) {
-                    $('.hero .container').height(78);
-                    $('.hero').height(78);
-                    $(this).removeClass('glyphicon-triangle-top').addClass('glyphicon-triangle-bottom').css({color: '#1a86c0', top: '-7px'});
-                }
-                else {
-                    $('.hero .container').height(228);
-                    $('.hero').height(228);
-                    $(this).removeClass('glyphicon-triangle-bottom').addClass('glyphicon-triangle-top').css({color: '#E9DBC1', top: '0px'});
-                }
-                resize();
-
-            });*/
         });
-    </script>
-    <script type="tpl" id="note">
-        {{each data as note i}}
-        {{if i > 0}}
-        <hr>
-        {{/if}}
-        <div class="div">
-        <span class="time">2016.4.20</span>
-        <img src="user.png" class="user" data-toggle="tooltip" data-placement="top" title="tingkl"/>
-        <div class="markdown">
-        {{note}}
-        </div>
-        </div>
-        {{/each}}
     </script>
     <script type="tpl" id="template">
            <li class="min-height">
@@ -660,17 +552,12 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
             </form>
         </div>
     </div>
- <!--   <div>
-        <div class="pin glyphicon glyphicon-triangle-top"></div>
-    </div>-->
 </div>
 
 <div class="container-fluid">
       <div class="c-row main">
-        <ul class="col-md-2 cbp_tmtimeline">
-        </ul>
-        <div class="col-md-8 cbp_tmlabel">
-        </div>
+          <ul class="col-md-2 cbp_tmtimeline"></ul>
+          <iframe class="col-md-8 cbp_tmlabel" src="content.html"></iframe>
           <div class="side col-md-2">
               <button type="submit" class="btn btn-danger btn-sm">消元法</button>
               <button type="submit" class="btn btn-danger btn-sm">主谓</button>

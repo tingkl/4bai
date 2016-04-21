@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="js/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/arttpl.js"></script>
+    <style>
+        .mCustomScrollBox {
+            border-radius: 5px;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        hr {
+            background-color: transparent;
+            height: 0;
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            background-color: transparent;
+            height: 0;
+            border-top: 1px solid rgba(0,0,0,0.7);
+            margin: 0;
+            clear: both;
+        }
+        .div {
+            position: relative;
+            padding: 40px 15px 10px;
+        }
+        .div:nth-of-type(even){
+            background-color: #222;
+        }
+        .mCSB_container {
+            margin: 0!important;
+        }
+        pre {
+            background-color: transparent;
+            border: 0px;
+            color: #eee;
+            margin:  0;
+        }
+        .time {
+            font-family: "Lobster Two", "Georgia", serif;
+            font-weight: 700;
+            font-style: italic;
+            color: #ddd;
+            float: right;
+            margin-right: 5px;
+        }
+        .user {
+            float: right;
+            border-radius: 50%;
+            position: relative;
+            top: -8px;
+            margin-right: 10px;
+        }
+        .light {
+            color: red;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<script type="tpl" id="note">
+        {{each data as note i}}
+        {{if i > 0}}
+        <hr>
+        {{/if}}
+        <div class="div">
+        <span class="time">2016.4.20</span>
+        <img src="user.png" class="user" data-toggle="tooltip" data-placement="top" title="tingkl"/>
+        <div class="markdown">
+        {{note}}
+        </div>
+        </div>
+        {{/each}}
+</script>
+<div class="container"></div>
+<script>
+    template.config('escape', false);
+    $.mCustomScrollbar.defaults.scrollButtons.enable=true; //enable scrolling buttons by default
+    $.mCustomScrollbar.defaults.axis="yx"; //enable 2 axis scrollbars by default
+    $("body").mCustomScrollbar({
+        theme:"light-thin",
+        axis:"y"
+    });
+    window.addEventListener('message', function (event) {
+        var msg = JSON.parse(event.data);
+        if (msg.command === 'refresh') {
+            $('#mCSB_1_container').html(template('note', msg.data));
+            $('[data-toggle="tooltip"]').tooltip();
+        }
+        else if (msg.command === 'highlight') {
+            var text = msg.data;
+            var root = $('#mCSB_1_container .markdown');
+            root.each(function (i, item) {
+                var html = $(item).html();
+                html = html.replace(/<em class="light">(.*?)<\/em>/g, '$1');
+                $(item).html(html.replace(text, '<em class="light">' + text + '</em>'));
+            });
+        }
+        else if (msg.command === 'resize') {
+            $('body').height(msg.data);
+        }
+    });
+    window.parent.postMessage('ready', window.location.origin);
+</script>
+</body>
+</html>
