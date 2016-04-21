@@ -9,11 +9,11 @@
     <link rel="stylesheet" type="text/css" href="css/component.css"/>
     <script src="js/arttpl.js"></script>
     <script src="js/modernizr.custom.js"></script>
-    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bootstrap3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="js/jquery.mousewheel.js"></script>
+    <script src="bootstrap3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/showdown.min.js"></script>
     <script type="note" id="a0">
 #hello, markdown!
@@ -383,7 +383,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
         function resize() {
             var height = getHeight();
             $('.main').height(height);
-            height = height - $('.keys').height() - 10;
+            height = height - $('.keys').height() - 5;
             $('.cbp_tmlabel').height(height);
             var top = (height - $('.header').height()) / 2;
             $('.header').css({'top': top + 'px', 'left': 15 + 'px'});
@@ -391,7 +391,6 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
         }
         $(window).resize(resize);
         window.addEventListener('message', function (event) {
-            console.log(event);
             if (event.data === 'ready') {
                 resize();
                 postMsg('refresh', des);
@@ -536,7 +535,7 @@ edp bos test.js bos://cae-pub-read/adtest/test.js
 <div class="hero">
     <div class="container">
         <div class="row">
-            <h2>Leanote Data Mining</h2>
+            <!--<h2>Leanote Data Mining</h2>-->
             <form class="col-md-offset-3" style="padding-top: 15px" role="search" method="GET" action="/search">
                 <div class="input-group" style="margin-right: 30px; width:200px;float:left;">
                     <div class="input-group-addon">粒度</div>
